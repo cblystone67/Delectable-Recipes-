@@ -24,6 +24,10 @@ const [popular, setPopular] = useState([]);
             <h3>Popular Picks</h3>
           <Splide options={{
             perPage: 4,
+            arrows: false,
+            pagination: false,
+            drag: "free",
+            gap: "5rem",
           }}>
             {popular.map((recipe) => {
               return(
@@ -41,7 +45,8 @@ const [popular, setPopular] = useState([]);
   )
 }
 
-const Wrapper = styled.div`margin: 4rem 0rem`;
+const Wrapper = styled.div`
+  margin: 3rem 0rem;`;
 const Card = styled.div`
   min-height: 25rem;
   border-radius: 2rem;
