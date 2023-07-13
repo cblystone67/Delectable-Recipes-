@@ -22,7 +22,9 @@ const [popular, setPopular] = useState([]);
     <div>
         <Wrapper>
             <h3>Popular Picks</h3>
-          <Splide>
+          <Splide options={{
+            perPage: 4,
+          }}>
             {popular.map((recipe) => {
               return(
                 <SplideSlide>
